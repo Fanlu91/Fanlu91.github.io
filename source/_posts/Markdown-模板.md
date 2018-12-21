@@ -1,16 +1,19 @@
 ---
 title: Markdown 模板
 date: 2018-12-19 17:01:12
-tags: markdown,template，cheatsheet
+tags: 
+-markdown
+-template
+-cheatsheet
 ---
 
-常用markdown语法参考。
+常用markdown语法参考和注意事项。
 
 ---
-#分隔符
+# 分隔符
 ```
 ---
-#分隔符 
+# 分隔符 
 ```
 
 # 标题
@@ -22,12 +25,14 @@ tags: markdown,template，cheatsheet
 
 ### 这是标题3
 #### 这是标题4
+> 要注意\#后面需要跟空格，否则有可能无法渲染，比如目前博客用的hexo。
 
-#转译字符
+
+# 转译字符
 ```
-使用 \ , 比如 \# \```
+使用 \ , 比如 \# \``` \<
 ```
-使用 \ , 比如 \# \```
+使用 \ , 比如 \# \``` \<
 
 # 链接
 ```
