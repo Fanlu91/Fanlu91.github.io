@@ -30,6 +30,6 @@ build:
   stage: build
   script:
     - ssh -o "StrictHostKeyChecking=no" -p27940 $TARGET_USER "mkdir -p ~/fromgitlab"
-    - ssh -p27940 $TARGET_USER "touch ~/fromgitlab/a"
+    - ssh -p27940 $TARGET_USER "touch ~/fromgitlab/aa"
 
   
