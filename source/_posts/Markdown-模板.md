@@ -3,22 +3,37 @@ title: Markdown 模板
 date: 2018-12-19 17:01:12
 tags: markdown,template，cheatsheet
 ---
-常用markdown格式参考。
+
+常用markdown语法参考。
+
+---
+#分隔符
+```
+---
+#分隔符 
+```
 
 # 标题
+```
+# 标题
+### 这是标题3
+#### 这是标题4
+```
 
-```
-## 这是标题2
+### 这是标题3
 #### 这是标题4
+
+#转译字符
 ```
-## 这是标题2
-#### 这是标题4
+使用 \ , 比如 \# \```
+```
+使用 \ , 比如 \# \```
 
 # 链接
 ```
-[描述](链接地址) 
+[fanlucloud.com](http://www.fanlucloud.com)
 ```
-[fanlucloud](http://www.fanlucloud.com)
+[fanlucloud.com](http://www.fanlucloud.com)
 
 # 引用
 在文字前 添加 \>
@@ -68,7 +83,7 @@ tags: markdown,template，cheatsheet
 | fanlucloud | Markdown| Latest |
 
 # 代码
-在代码前后增加 三个反单引号```
+在代码前后增加 三个反单引号\```
 
 ```
 int i = 0; i = 1;
