@@ -29,7 +29,7 @@ before_script:
 build:
   stage: build
   script:
-    - ssh -o "StrictHostKeyChecking=no" -p27940 $TARGET_USER "mkdir -p ~/fromgitlab"
-    - ssh -p27940 $TARGET_USER "touch ~/fromgitlab/aa"
+    - ssh -o "StrictHostKeyChecking=no" -p27940 $TARGET_USER "cd /usr/etc/hexodir; git pull; hexo clean; hexo generate"
+    - ssh -p27940 $TARGET_USER "touch ~/fromgitlab/timestamp"
 
   
