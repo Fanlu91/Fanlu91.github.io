@@ -90,7 +90,7 @@ tags:
 | fanlucloud | Markdown| Latest |
 
 # 代码
-在代码前后增加 三个反单引号\```
+在代码前后增加 三个反单引号
 
 ```
 int i = 0; i = 1;
