@@ -3,7 +3,7 @@ title: 博客搭建记录-从写作环境到持续集成部署
 date: 2018-12-21 17:01:12
 tags: 
 - hexo
-- gitlab
+- gitlab
 - ci/cd
 - blog
 ---
