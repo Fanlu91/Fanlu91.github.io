@@ -7,7 +7,10 @@ tags:
 - cheatsheet
 ---
 
-常用markdown语法参考和注意事项。
+常用markdown语法参考及有用的链接。
+
+在线富文本转markdown http://markitdown.medusis.com/ 
+html转markdown http://domchristie.github.io/turndown/ 
 
 ---
 # 分隔符
@@ -52,8 +55,8 @@ tags:
 # 有序列表
 ```
 1. 有序列表 在行首增加数字和英文句点, 不要求数字一定要连续
-1. 有序列表
-4. 有序列表
+2. 有序列表
+3. 有序列表
 ```
 1. 有序列表 在行首增加数字和英文句点, 不要求数字一定要连续
 1. 有序列表
