@@ -26,4 +26,4 @@ tags:
   - nginx做反向代理实现https
 - 仓库 gitlab
 - 持续集成 gitlab CI
-- 文章编写 vscode / Typora /Atom（试用ing）
+- 文章编写 vscode 
