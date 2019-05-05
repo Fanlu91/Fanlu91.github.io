@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fanlucloud.com/2018/12/19/Markdown-模板/">
+    <link itemprop="mainEntityOfPage" href="https://fanlucloud.com/2018/12/21/how-to-create-this-blog/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fanlu">
@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Markdown-模板/" itemprop="url">Markdown 模板</a></h1>
+                <a class="post-title-link" href="/2018/12/21/how-to-create-this-blog/" itemprop="url">博客搭建记录-从写作环境到持续集成部署</a></h1>
         
 
         <div class="post-meta">
@@ -273,8 +273,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T17:01:12+08:00">
-                2018-12-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-21T17:01:12+08:00">
+                2018-12-21
               </time>
             
 
@@ -305,7 +305,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  248
+                  178
                 </span>
               
 
@@ -344,46 +344,28 @@
       
         
           
-            <p>常用markdown格式参考。</p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p># 这是标题1<br>## 这是标题2<br>###### 这是标题6</p>
-<h2 id="这是标题2"><a href="#这是标题2" class="headerlink" title="这是标题2"></a>这是标题2</h2><h6 id="这是标题6"><a href="#这是标题6" class="headerlink" title="这是标题6"></a>这是标题6</h6><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>[描述](链接地址)<br><a href="http://www.fanlucloud.com" target="_blank" rel="noopener">凡路</a></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在文字前 添加 ></p>
-<blockquote>
-<p>比如这个</p>
-</blockquote>
-<h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>\1. 有序列表 在行首增加数字和英文句点, 不要求数字一定要连续<br>\1. 有序列表<br>\4. 有序列表</p>
-<ol>
-<li>有序列表 在行首增加数字和英文句点, 不要求数字一定要连续</li>
-<li>有序列表</li>
-<li>有序列表</li>
-</ol>
-<h1 id="无序表"><a href="#无序表" class="headerlink" title="无序表"></a>无序表</h1><p>* 无序列表 在行首增加 <em> 或 -<br>- 无序列表 在行首增加 </em> 或 -</p>
+            <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>近期工作不忙，陆续花了几天时间搭建这个博客，最初期望是：</p>
 <ul>
-<li>无序列表 在行首增加 * 或 -</li>
+<li>利用已有的腾讯云vps和域名</li>
+<li>可以在<em>任意环境</em>编写markdown文件</li>
+<li>提交git后直接能够查看（网页）</li>
+<li>支持统计/评论</li>
+<li>支持https</li>
+<li>尽量简介/美观</li>
 </ul>
+<p>经过调研和尝试，目前基本满足了自己的全部需求。本地完成文本编写push到gitlab，后者自动调用CICD，连接服务器，调用hexo进行渲染和重新部署，并同步推送至github.io。</p>
 <ul>
-<li>无序列表 在行首增加 * 或 -</li>
+<li>框架 Hexo</li>
+<li>环境和服务<ul>
+<li>腾讯云 / github page</li>
+<li>hexo server</li>
+<li>nginx做反向代理实现https</li>
 </ul>
-<h1 id="字样式"><a href="#字样式" class="headerlink" title="字样式"></a>字样式</h1><p>**粗体*<em><br>\</em>斜体*<br>~~删除线~~</p>
-<p><strong>粗体</strong><br><em>斜体</em><br><del>删除线</del></p>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>| 凡路|更新 | 版本 |<br>|—|—|—|<br>| fanlucloudNote | Markdown| Latest |</p>
-<table>
-<thead>
-<tr>
-<th>凡路</th>
-<th>更新</th>
-<th>版本</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fanlucloudNote</td>
-<td>Markdown</td>
-<td>Latest</td>
-</tr>
-</tbody>
-</table>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>在代码前后增加 三个反单引号<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">int i = 0; i = 1;</span><br><span class="line">for (int i = 0; i &lt; 100; i++)</span><br><span class="line">&#123;</span><br><span class="line">      printf(&quot;hello from fanlu!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+<li>仓库 gitlab</li>
+<li>持续集成 gitlab CI</li>
+<li>文章编写 vscode </li>
+</ul>
 
           
         
@@ -432,7 +414,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fanlucloud.com/2018/12/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://fanlucloud.com/2018/12/19/markdown-template/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fanlu">
@@ -451,7 +433,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/13/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/12/19/markdown-template/" itemprop="url">Markdown 模板</a></h1>
         
 
         <div class="post-meta">
@@ -463,8 +445,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-13T17:44:09+08:00">
-                2018-12-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T17:01:12+08:00">
+                2018-12-19
               </time>
             
 
@@ -495,7 +477,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  73
+                  363
                 </span>
               
 
@@ -534,16 +516,59 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+            <p>常用markdown语法参考及有用的链接。<br>在线富文本转markdown <a href="http://markitdown.medusis.com/" target="_blank" rel="noopener">http://markitdown.medusis.com/</a><br>html转markdown <a href="http://domchristie.github.io/turndown/" target="_blank" rel="noopener">http://domchristie.github.io/turndown/</a> </p>
+<p>通常参考学习github上的readme文件即可。</p>
+<hr>
+<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"># 分隔符</span><br></pre></td></tr></table></figure>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 标题</span><br><span class="line">### 这是标题3</span><br><span class="line">#### 这是标题4</span><br></pre></td></tr></table></figure>
+<h3 id="这是标题3"><a href="#这是标题3" class="headerlink" title="这是标题3"></a>这是标题3</h3><h4 id="这是标题4"><a href="#这是标题4" class="headerlink" title="这是标题4"></a>这是标题4</h4><blockquote>
+<p>要注意#后面需要跟空格，否则有可能无法渲染，比如目前博客用的hexo。</p>
+</blockquote>
+<h1 id="转译字符"><a href="#转译字符" class="headerlink" title="转译字符"></a>转译字符</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 \ , 比如 \# \&gt;</span><br></pre></td></tr></table></figure>
+<p>使用 \ , 比如 # ></p>
+<blockquote>
+<p>Hexo 的markdown解析比较不尽如人意，发现部分转译无法实现。</p>
+</blockquote>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[fanlucloud.com](http://www.fanlucloud.com)</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.fanlucloud.com" target="_blank" rel="noopener">fanlucloud.com</a></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在文字前 添加 ><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 比如这个</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>比如这个</p>
+</blockquote>
+<h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表 在行首增加数字和英文句点, 不要求数字一定要连续</span><br><span class="line">2. 有序列表</span><br><span class="line">3. 有序列表</span><br></pre></td></tr></table></figure>
+<ol>
+<li>有序列表 在行首增加数字和英文句点, 不要求数字一定要连续</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol>
+<h1 id="无序表"><a href="#无序表" class="headerlink" title="无序表"></a>无序表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 无序列表 在行首增加 * 或 -</span><br><span class="line">- 无序列表 在行首增加 * 或 -</span><br></pre></td></tr></table></figure>
+<ul>
+<li>无序列表 在行首增加 * 或 -</li>
+</ul>
+<ul>
+<li>无序列表 在行首增加 * 或 -</li>
+</ul>
+<h1 id="字样式"><a href="#字样式" class="headerlink" title="字样式"></a>字样式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**粗体**</span><br><span class="line">*斜体*</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+<p><strong>粗体</strong><br><em>斜体</em><br><del>删除线</del></p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 凡路|内容 | 版本 |</span><br><span class="line">|---|---|---|</span><br><span class="line">| fanlucloud | Markdown| Latest |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>凡路</th>
+<th>内容</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fanlucloud</td>
+<td>Markdown</td>
+<td>Latest</td>
+</tr>
+</tbody>
+</table>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>在代码前后增加 三个反单引号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int i = 0; i = 1;</span><br><span class="line">for (int i = 0; i &lt; 100; i++)</span><br><span class="line">&#123;</span><br><span class="line">      printf(&quot;hello from fanlu!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -637,7 +662,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -690,7 +715,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -704,7 +729,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">321</span>
+    <span title="Site words total count">541</span>
   
 </div>
 
