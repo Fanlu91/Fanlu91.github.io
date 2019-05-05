@@ -17,6 +17,7 @@ tags:
 - 支持https
 - 尽量简介/美观
 
+# 实践
 经过调研和尝试，目前基本满足了自己的全部需求。本地完成文本编写push到gitlab，后者自动调用CICD，连接服务器，调用hexo进行渲染和重新部署，并同步推送至github.io。
 
 - 框架 Hexo
@@ -27,3 +28,10 @@ tags:
 - 仓库 gitlab
 - 持续集成 gitlab CI
 - 文章编写 vscode 
+
+# 扩展能力
+- 使用google analysis/baidu站长统计
+- 添加disqus评论
+- google adsense
+
+
