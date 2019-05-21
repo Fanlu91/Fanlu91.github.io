@@ -34,6 +34,7 @@ tags:
   git submodule问题参考了 
   https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97
   https://codeday.me/bug/20170623/27343.html
+  https://juejin.im/post/5c2e22fcf265da615d72c596
 ## 环境和服务
   - 腾讯云 / github page
   - hexo server
