@@ -2,5 +2,5 @@
 	path = themes/next
 	url = https://github.com/Fanlu91/hexo-theme-next.git
 [submodule "themes/themes/next"]
-	path = themes/themes/next
+	path = themes/next
 	url = https://github.com/Fanlu91/hexo-theme-next.git
