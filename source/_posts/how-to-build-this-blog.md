@@ -43,11 +43,12 @@ tags:
 - 仓库 gitlab
 - 持续集成 gitlab CI
 ## 其他
-- 文章编写 vscode 安装md预览插件
-
-# 待扩展能力
+- 文章编写使用 vscode ，推荐安装md预览插件
+- 使用 leancloud 进行访问计数
+- 使用 [Valine](https://valine.js.org/) + leancloud 实现无后端评论
 - 使用google analysis/baidu站长统计
-- 添加disqus评论
+  
+# 待扩展能力
 - google adsense
   
 

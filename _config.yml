@@ -5,11 +5,10 @@
 # Site
 title: 凡路
 subtitle:
-description: Standing on the shoulder of giants.
+description: Standing on the Shoulder of Giants.
 author: Fanlu
 language:
-- zh-Hans
-- en
+- zh-CN
 timezone:
 
 # URL
