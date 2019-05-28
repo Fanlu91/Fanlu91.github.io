@@ -96,17 +96,20 @@
 
 
 
-  <meta name="description" content="你好，我是凡路，这是我的个人博客。 记录、总结和分享一些个人学习过程中的经验教训，巩固学习成果，如果顺便能够对你有所帮助，那再好不过了。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://fanlucloud.com/about/index.html">
+  <meta name="description" content="本篇内容大量参考了王争老师在极客时间App上《数据结构与算法之美专栏》06，07 两章的内容。推荐订阅学习。 定义链表不需要连续的内存空间，通过指针将一组零散的内存串联起来使用。内存块称为链表的结点，为了将结点串起来，结点除了存储数据data外，还需要记录下一个结点的地址，这个记录下一个结点地址的指针叫做后继指针next。（即结点由数据域和指针域构成） 第一个和最后一个结点是比较特殊的，分别是头结">
+<meta name="keywords" content="linked list,data structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="all you need to know about linkedlist">
+<meta property="og:url" content="https://fanlucloud.com/2019/05/28/all-you-need-to-know-about-linkedlist/index.html">
 <meta property="og:site_name" content="凡路">
-<meta property="og:description" content="你好，我是凡路，这是我的个人博客。 记录、总结和分享一些个人学习过程中的经验教训，巩固学习成果，如果顺便能够对你有所帮助，那再好不过了。">
+<meta property="og:description" content="本篇内容大量参考了王争老师在极客时间App上《数据结构与算法之美专栏》06，07 两章的内容。推荐订阅学习。 定义链表不需要连续的内存空间，通过指针将一组零散的内存串联起来使用。内存块称为链表的结点，为了将结点串起来，结点除了存储数据data外，还需要记录下一个结点的地址，这个记录下一个结点地址的指针叫做后继指针next。（即结点由数据域和指针域构成） 第一个和最后一个结点是比较特殊的，分别是头结">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T14:32:56.285Z">
+<meta property="og:image" content="https://fanlucloud.com/images/geektime_data_alogrithm.jpg">
+<meta property="og:updated_time" content="2019-05-28T08:46:23.757Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="你好，我是凡路，这是我的个人博客。 记录、总结和分享一些个人学习过程中的经验教训，巩固学习成果，如果顺便能够对你有所帮助，那再好不过了。">
+<meta name="twitter:title" content="all you need to know about linkedlist">
+<meta name="twitter:description" content="本篇内容大量参考了王争老师在极客时间App上《数据结构与算法之美专栏》06，07 两章的内容。推荐订阅学习。 定义链表不需要连续的内存空间，通过指针将一组零散的内存串联起来使用。内存块称为链表的结点，为了将结点串起来，结点除了存储数据data外，还需要记录下一个结点的地址，这个记录下一个结点地址的指针叫做后继指针next。（即结点由数据域和指针域构成） 第一个和最后一个结点是比较特殊的，分别是头结">
+<meta name="twitter:image" content="https://fanlucloud.com/images/geektime_data_alogrithm.jpg">
 
 
 
@@ -114,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://fanlucloud.com/about/">
+  <link rel="canonical" href="https://fanlucloud.com/2019/05/28/all-you-need-to-know-about-linkedlist/">
 
 
 
@@ -124,7 +127,7 @@
   };
 </script>
 
-  <title>about | 凡路</title>
+  <title>all you need to know about linkedlist | 凡路</title>
   
 
 
@@ -248,7 +251,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -377,75 +380,282 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fanlucloud.com/2019/05/28/all-you-need-to-know-about-linkedlist/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fanlu">
+      <meta itemprop="description" content="Standing on the Shoulder of Giants.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凡路">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">about
-
-</h2>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>你好，我是凡路，这是我的个人博客。</p>
-<p>记录、总结和分享一些个人学习过程中的经验教训，巩固学习成果，如果顺便能够对你有所帮助，那再好不过了。</p>
+          <h2 class="post-title" itemprop="name headline">all you need to know about linkedlist
 
+              
+            
+          </h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 14:21:06 / 修改时间：16:46:23" itemprop="dateCreated datePublished" datetime="2019-05-28T14:21:06+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/28/all-you-need-to-know-about-linkedlist/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/28/all-you-need-to-know-about-linkedlist/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/05/28/all-you-need-to-know-about-linkedlist/" class="leancloud_visitors" data-flag-title="all you need to know about linkedlist">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>本篇内容大量参考了王争老师在极客时间App上《数据结构与算法之美专栏》<a href="https://time.geekbang.org/column/article/41013" target="_blank" rel="noopener">06</a>，<a href="https://time.geekbang.org/column/article/41149" target="_blank" rel="noopener">07</a> 两章的内容。推荐订阅学习。</p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p><strong>链表</strong>不需要连续的内存空间，通过指针将一组零散的内存串联起来使用。内存块称为链表的<strong>结点</strong>，为了将结点串起来，结点除了存储数据data外，还需要记录下一个结点的地址，这个记录下一个结点地址的指针叫做<strong>后继指针next</strong>。（即结点由数据域和指针域构成）</p>
+<p>第一个和最后一个结点是比较特殊的，分别是头结点和尾结点。头结点用来记录链表的基地址；尾结点的后继指针指向空地址null。</p>
+<h2 id="Singly-Doubly-Circular"><a href="#Singly-Doubly-Circular" class="headerlink" title="Singly/Doubly/Circular"></a>Singly/Doubly/Circular</h2><p>单链表只有一个方向，尾结点指向空地址。循环链表是一种特殊的单链表，即尾结点的后继指针指向头结点。</p>
+<p>双向链表比单链表多一个前驱指针prev，指向前面结点的地址。支持双向遍历。</p>
+<p>当然相应的也有双向循环链表。</p>
+<p>java中的LinkedHashMap就用到了双向链表。</p>
+<p>虽然双向链表占用多一点内存空间，但是空间换时间很多情况下是值得的。<br>双向链表的相对优势：一些情况下插入和删除都更高效，因为它支持以O(1)找到前驱结点。</p>
+<h2 id="Delete-Add"><a href="#Delete-Add" class="headerlink" title="Delete/Add"></a>Delete/Add</h2><p>删除操作 ：</p>
+<ol>
+<li>删除结点中值等于指定值的结点<br>不管是单项还是双向，都需要从头遍历 O（n）</li>
+<li>删除已知指向的结点<br>删除后需要知道被删除结点的前驱结点是谁，修改它的后继指针，此时单向链表无法直接知道，需要耗费O(n)去找，双向就不用，O(1)即可。</li>
+</ol>
+<p>插入操作 :</p>
+<ol>
+<li>插入指定排序的位置<br>需要遍历</li>
+<li>插入已知结点后<br>直接插入</li>
+<li>插入已知结点前<br>双向链表没有问题，单项链表存在不知道前驱是谁的问题，需要从头遍历</li>
+</ol>
+<blockquote>
+<p>除删除和插入，对于有序链表，双向链表在查找时更具优势，可以选择向前还是向后找。</p>
+</blockquote>
+<h2 id="Sentinel-Node-哨兵结点"><a href="#Sentinel-Node-哨兵结点" class="headerlink" title="Sentinel Node 哨兵结点"></a>Sentinel Node 哨兵结点</h2><p>A sentinel is a dummy object that allows us to simplify boundary conditions.</p>
+<p>A sentinel node is a dummy node that goes at the front of a list.<br>In a doubly-linked list, the sentinel node points to the first and last elements of the list. </p>
+<p>单链表在插入和删除时，需要修改<strong>前驱结点的后继指针</strong>，这就形成了“邻居依赖”，链表中第一个元素没有前驱结点，如果没有特殊处理在插入和删除第一个结点时，就会出错。</p>
+<p>head 表示头结点指针，指向第一个结点，head == null表示是空链表。</p>
+<h3 id="带头链表"><a href="#带头链表" class="headerlink" title="带头链表"></a>带头链表</h3><p>引入哨兵结点，不管链表是否为空，head指针都指向一个哨兵结点，我们把这种链表叫做带头链表。</p>
+<h1 id="数组与链表的取舍"><a href="#数组与链表的取舍" class="headerlink" title="数组与链表的取舍"></a>数组与链表的取舍</h1><p>实际开发当中，不能简单的用复杂度分析来决定使用哪种数据结构。</p>
+<p>如数组使用的是连续内存，可以CPU缓存机制可以预读数组中的数据，访问效率更高，但是链表的离散存储对CPU的缓存机制就不是很友好，无法高效预读。（CPU在从内存读取数据的时候，会先把读取到的数据加载到CPU的缓存中。而CPU每次从内存读取数据并不是只读取那个特定要访问的地址，而是读取一个数据块，并保存到CPU缓存中，然后下次访问内存数据的时候就会先从CPU缓存开始查找，如果找到就不需要再从内存中取。这样就实现了比内存访问速度更快的机制，也就是CPU缓存存在的意义:为了弥补内存访问速度过慢与CPU执行速度快之间的差异而引入）</p>
+<p>数组的缺陷是大小固定，申请太大不一定有，申请太小扩容很麻烦。<br>链表本身没有大小限制。</p>
+<p>对内存的使用要求苛刻应多使用数组，链表除了需要额外的存储空间去存放指针，频繁的插入删除还会导致频繁的内存申请和释放，造成内存随便，触发gc。</p>
+<h2 id="Java-ArrayList"><a href="#Java-ArrayList" class="headerlink" title="Java ArrayList"></a>Java ArrayList</h2><p>ArrayList 最大的优势就是可以将很多数组操作的细节封装起来。还有一个优势，就是支持动态扩容</p>
+<p>当然动态扩容是比较耗时和消耗资源的，如果事先能确定需要存储的数据大小，最好在创建 ArrayList 的时候事先指定数据大小。</p>
+<p>不过扩容时如果连续内存不够，就需要开辟新的更大的空间并且拷贝已有数据，效率很差。</p>
+<p>相对来说更应<strong>使用数组而不是ArrayList</strong>的场景：</p>
+<ol>
+<li>ArrayList不能存储基本类型，比如 int、long，需要封装为 Integer、Long类，Autoboxing、Unboxing 会有一定的性能消耗。追求性能应使用数组</li>
+<li>如果事先已知数据的大小，使用数组十分简便，arrayList的大部分方法并不会用到。</li>
+<li>表示多维数据时，数组更加直观</li>
+<li>其他链表的缺点：额外内存存放指针、频繁删除插入容易产生随便引发GC</li>
+</ol>
+<p>比如 Object[][] array<br>用容器的话则ArrayList<arraylist> array</arraylist></p>
+<p>业务开发使用容器省时省力，使用ArrayList就足够了。如果是做底层，则要考虑使用数组而不是容器。</p>
+<blockquote>
+<p>Q&amp;A 为什么大多数语言数组下标要从0开始？</p>
+</blockquote>
+<p>从内存模型可知，下标的实际含义是偏移（offset）。<br>a来表示数组的首地址，a[0]则表示偏移为0，计算a[k]的地址根据偏移寻址时使用如下公式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[k]_address = base_address + k * type_size</span><br></pre></td></tr></table></figure></p>
+<p>从上述公式的type_size可以了解为什么数组只能存放同一种数据类型<br>若使用1做地址，则要多做一次-1 减法。</p>
+<p>当然，还有就是历史原因，C是以0开始的。上述理由并不是绝对，尤其不同编程语言，比如python还支持负数下标。</p>
+<p>btw二维数组寻址对于m*n的数组 a [ i ][ j ] (i &lt; m,j &lt; n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">address = base_address + ( i * n + j) * type_size</span><br></pre></td></tr></table></figure>
+<h1 id="必须掌握的编程问题"><a href="#必须掌握的编程问题" class="headerlink" title="必须掌握的编程问题"></a>必须掌握的编程问题</h1><h2 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h2><ol>
+<li><p>理解指针或引用的含义<br>含义：将某个变量（对象）赋值给指针（引用），实际上就是就是将这个变量（对象）的地址赋值给指针（引用）。<br>示例：<br>p—&gt;next = q; 表示p节点的后继指针存储了q节点的内存地址。<br>p—&gt;next = p—&gt;next—&gt;next; 表示p节点的后继指针存储了p节点的下下个节点的内存地址。</p>
+</li>
+<li><p>警惕丢失指针和内存泄露<br>插入第一个/删除最后一个</p>
+</li>
+<li>利用哨兵简化问题<br>减少特殊情况及相应的判断</li>
+<li>重点留意边界条件处理<ul>
+<li>链表为空</li>
+<li>只包含一个结点</li>
+<li>只包含两个结点</li>
+<li>处理头/尾结点</li>
+</ul>
+</li>
+<li>画图举例，辅助思考</li>
+<li>多写多练，没有捷径<br>孰能生巧，不管是什么算法，只有经过反复的练习，才能信手拈来。</li>
+</ol>
+<p>所以到底要练什么呢？ 下一节是我收集的所有需要掌握的链表题目及java代码</p>
+<h2 id="所有题目"><a href="#所有题目" class="headerlink" title="所有题目"></a>所有题目</h2><p>移步<a href="">下一篇</a></p>
+<p>开头提到过的，本篇内容大量参考了王争老师在极客时间App上《数据结构与算法之美专栏》<a href="https://time.geekbang.org/column/article/41013" target="_blank" rel="noopener">06</a>，<a href="https://time.geekbang.org/column/article/41149" target="_blank" rel="noopener">07</a> 两章的内容。整个专栏制作非常不错，推荐订阅学习。</p>
+<p><img src="/images/geektime_data_alogrithm.jpg" alt=""></p>
+
       
     </div>
-    
-
-
 
     
+      
+
+
+    
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linked-list/" rel="tag"># linked list</a>
+          
+            <a href="/tags/data-structure/" rel="tag"># data structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/22/common-math-term-translation/" rel="next" title="常用数学词汇翻译">
+                <i class="fa fa-chevron-left"></i> 常用数学词汇翻译
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/28/master-linked-list/" rel="prev" title="master linked list">
+                master linked list <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -478,8 +688,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -628,6 +847,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Singly-Doubly-Circular"><span class="nav-number">1.1.</span> <span class="nav-text">Singly/Doubly/Circular</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Delete-Add"><span class="nav-number">1.2.</span> <span class="nav-text">Delete/Add</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sentinel-Node-哨兵结点"><span class="nav-number">1.3.</span> <span class="nav-text">Sentinel Node 哨兵结点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带头链表"><span class="nav-number">1.3.1.</span> <span class="nav-text">带头链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组与链表的取舍"><span class="nav-number">2.</span> <span class="nav-text">数组与链表的取舍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-ArrayList"><span class="nav-number">2.1.</span> <span class="nav-text">Java ArrayList</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#必须掌握的编程问题"><span class="nav-number">3.</span> <span class="nav-text">必须掌握的编程问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些技巧"><span class="nav-number">3.1.</span> <span class="nav-text">一些技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有题目"><span class="nav-number">3.2.</span> <span class="nav-text">所有题目</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1174,38 +1410,37 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1230,9 +1465,7 @@
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            addCount(Counter);
           
         });
     });
@@ -1274,7 +1507,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
